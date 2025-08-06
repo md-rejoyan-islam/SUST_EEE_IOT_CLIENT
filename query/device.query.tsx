@@ -2,7 +2,9 @@ const apiUrl = "https://eee.rejoyan.me";
 // const apiUrl = "http://localhost:5050";
 
 export const getAllDevices = async () => {
-  const devices = await fetch(`${apiUrl}/api/v1/devices`);
+  const devices = await fetch(`${apiUrl}/api/v1/devices`, {
+    cache: "no-store",
+  });
   if (!devices.ok) {
     throw new Error("Failed to fetch devices");
   }
@@ -11,7 +13,9 @@ export const getAllDevices = async () => {
 };
 
 export const getDeviceById = async (id: string) => {
-  const device = await fetch(`${apiUrl}/api/v1/devices/${id}`);
+  const device = await fetch(`${apiUrl}/api/v1/devices/${id}`, {
+    cache: "no-store",
+  });
   if (!device.ok) {
     throw new Error(`Failed to fetch device with id ${id}`);
   }
