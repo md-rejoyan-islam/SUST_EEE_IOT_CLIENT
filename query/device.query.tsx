@@ -1,4 +1,4 @@
-const apiUrl = "http://eee.rejoyan.me";
+const apiUrl = "https://eee.rejoyan.me";
 // const apiUrl = "http://localhost:5050";
 
 export const getAllDevices = async () => {
