@@ -1,3 +1,5 @@
+import Menu from "@/components/shared/menu";
+import { Toaster } from "@/components/ui/sonner";
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
@@ -27,7 +29,10 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        {children}
+        <Menu />
+        <main className="max-w-7xl mx-auto">{children}</main>
+
+        <Toaster />
       </body>
     </html>
   );
